@@ -10,6 +10,11 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema dans_tes_reves
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `dans_tes_reves`.`presentation`;
+DROP TABLE IF EXISTS `dans_tes_reves`.`series`;
+DROP TABLE IF EXISTS `dans_tes_reves`.`files`;
+DROP TABLE IF EXISTS `dans_tes_reves`.`creation`;
+DROP TABLE IF EXISTS `dans_tes_reves`.`user`;
 
 -- -----------------------------------------------------
 -- Schema dans_tes_reves
