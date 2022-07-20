@@ -11,7 +11,9 @@ function Footer() {
       <Link to="/home">
         <img src={Logo} alt="logo dans tes rêves" className="p-8 w-40" />
       </Link>
-      <img src={LogoInsta} alt="logo instagram" className="p-8" />
+      <a href="https://instagram.com/dans.tes.reves._?igshid=YmMyMTA2M2Y=">
+        <img src={LogoInsta} alt="logo instagram" className="p-8" />
+      </a>
       <Link to="/contact">
         <img src={LogoLetter} alt="logo letter" className="p-8" />
       </Link>
