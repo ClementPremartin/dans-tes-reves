@@ -8,10 +8,10 @@ function Sections() {
 
   return (
     <div>
-      <h2 className="text-white font-sansita text-2xl pt-12">
+      <h2 className="text-white font-sansita text-2xl pt-12 pb-12">
         Créations originales
       </h2>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full">
         {cards.map((card) => (
           <SectionCard card={card} />
         ))}

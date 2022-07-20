@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function SectionCard({ card }) {
   return (
-    <div className="w-40 bg-darkBlue opacity-75 rounded-lg">
+    <div className="w-40 bg-darkBlue opacity-75 rounded-lg h-60 object-contain">
       <img
         src={`${import.meta.env.VITE_BACKEND_URL}/assets/images/${
           card.pictures[0].image_url
