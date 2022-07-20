@@ -23,7 +23,7 @@ function Serie() {
         {creations[0].serie_name}
       </h1>
       {creations[0].arts.map((crea) => (
-        <div className="pb-28">
+        <div key={crea.id} className="pb-28">
           <SerieDetails crea={crea} />
         </div>
       ))}

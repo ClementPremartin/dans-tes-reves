@@ -96,12 +96,16 @@ select {
 
 /* Animation for clouds */
 
-.cloud-mid, .cloud-right{
+.cloud-mid, .cloud-right, .cloud-left{
 	animation: move 6s ease infinite;
 }
 
 .cloud-mid{
   animation-duration: 8s;
+}
+
+.cloud-left{
+  animation-duration: 5s;
 }
 
 @keyframes move{
