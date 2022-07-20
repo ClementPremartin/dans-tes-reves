@@ -1,7 +1,11 @@
+/* eslint-disable import/no-unresolved */
+import ContactForm from "@components/ContactForm";
+
 function Contact() {
   return (
-    <div>
-      <h1>Contact Page</h1>
+    <div className="m-8">
+      <h1 className="font-sansita text-white text-3xl">Me contacter</h1>
+      <ContactForm />
     </div>
   );
 }
