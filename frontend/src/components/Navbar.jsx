@@ -11,17 +11,17 @@ function Navbar() {
         <nav>
           <ul className="flex flex-col">
             <li>
-              <Link to="/" className="menu-item">
+              <Link to="/" className="menu-item font-sansita text-4xl">
                 Wait
               </Link>
             </li>
             <li>
-              <Link to="/home" className="menu-item">
+              <Link to="/home" className="menu-item font-sansita text-4xl">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="menu-item">
+              <Link to="/contact" className="menu-item font-sansita text-4xl">
                 Contact
               </Link>
             </li>
