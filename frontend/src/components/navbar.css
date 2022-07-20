@@ -29,7 +29,8 @@ width: 24px;
 
 /* Color/shape of close button cross */
 .bm-cross {
-background: #bdc3c7;
+background: #ADC4D4
+;
 }
 
 /*
@@ -55,7 +56,7 @@ fill: #373a47;
 
 /* Wrapper for item list */
 .bm-item-list {
-color: #b8b7ad;
+color: #ADC4D4;
 padding: 0.8em;
 }
 
