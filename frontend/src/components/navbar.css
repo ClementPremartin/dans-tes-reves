@@ -12,7 +12,7 @@
 position: fixed;
 top: 0px;
 background: #475C6A;
-opacity: 80%;
+opacity: 95%;
 border-radius: 5px;
 box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
@@ -29,7 +29,8 @@ width: 24px;
 
 /* Color/shape of close button cross */
 .bm-cross {
-background: #bdc3c7;
+background: #ADC4D4
+;
 }
 
 /*
@@ -55,10 +56,12 @@ fill: #373a47;
 
 /* Wrapper for item list */
 .bm-item-list {
-color: #b8b7ad;
+color: #ADC4D4;
 padding: 0.8em;
 }
 
 .bm-item {
-    display: inline-block;
-  }
+    display: flex;
+    justify-content: flex-end;
+    text-align: end;
+}

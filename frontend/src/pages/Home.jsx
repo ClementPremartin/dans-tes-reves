@@ -9,7 +9,7 @@ function Home() {
   return (
     <div className="m-8">
       <Presentation />
-      <div className="w-40 absolute right-0 pt-10 opacity-80 cloud-right">
+      <div className="w-40 absolute right-0 pt-28 opacity-80 cloud-right">
         <img src={CloudRight} alt="tiny cloud" />
       </div>
       <Sections />
