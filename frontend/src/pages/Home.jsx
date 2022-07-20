@@ -9,11 +9,11 @@ function Home() {
   return (
     <div className="m-8">
       <Presentation />
-      <div className="w-40 absolute right-0 pt-10 opacity-80">
+      <div className="w-40 absolute right-0 pt-10 opacity-80 cloud-right">
         <img src={CloudRight} alt="tiny cloud" />
       </div>
       <Sections />
-      <div className="w-40 relative opacity-80">
+      <div className="w-40 relative opacity-80 cloud-mid">
         <img src={CloudMid} alt="tiny cloud" />
       </div>
     </div>

@@ -91,5 +91,19 @@ select {
 .App {
   width: 100%;
   height: 100vh;
-  background-color: $main-color;
+  background-color: main-color;
+}
+
+/* Animation for clouds */
+
+.cloud-mid, .cloud-right{
+	animation: move 6s ease infinite;
+}
+
+.cloud-mid{
+  animation-duration: 8s;
+}
+
+@keyframes move{
+  50% { transform: translateX(-15px); }
 }
