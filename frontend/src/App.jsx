@@ -1,6 +1,5 @@
 /* eslint-disable import/no-unresolved */
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
 
 import Admin from "@pages/Admin";
 import Waiting from "@pages/Waiting";
@@ -12,10 +11,9 @@ import Navbar from "@components/Navbar";
 import "./App.css";
 
 function App() {
-  const [isOpenBurger, setIsOpenBurger] = useState(false);
   return (
     <div>
-      <Navbar isOpenBurger={isOpenBurger} setIsOpenBurger={setIsOpenBurger} />
+      <Navbar />
       <Routes>
         <Route path="/admin" element={<Admin />} />
         <Route path="/" element={<Waiting />} />
