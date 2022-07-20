@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function SectionCard({ card }) {
   return (
     <div>
-      <div className="w-40 bg-darkBlue opacity-75 rounded-lg mb-10">
+      <div className="w-40 bg-darkBlue opacity-75 rounded-lg mb-10 shadow-2xl">
         <Link to={`/home/${card.id}`}>
           <button type="button">
             <img
