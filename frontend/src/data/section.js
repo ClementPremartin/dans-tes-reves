@@ -1,7 +1,7 @@
 const section = [
   {
     id: 1,
-    artTitle: "Joyeux Bouquet",
+    artTitle: "La triade des beaux jours",
     pictures: [
       {
         id: 1,
@@ -17,7 +17,7 @@ const section = [
   },
   {
     id: 2,
-    artTitle: "Première brasse dans l'étang",
+    artTitle: "Collages Textiles",
     pictures: [
       {
         id: 1,
