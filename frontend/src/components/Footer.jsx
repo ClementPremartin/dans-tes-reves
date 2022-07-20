@@ -9,11 +9,11 @@ function Footer() {
   return (
     <div className="grid grid-cols-3 grid-rows-1">
       <Link to="/home">
-        <img src={Logo} alt="logo dans tes rêves" className="p-5" />
+        <img src={Logo} alt="logo dans tes rêves" className="p-8 w-40" />
       </Link>
-      <img src={LogoInsta} alt="logo instagram" className="p-5" />
+      <img src={LogoInsta} alt="logo instagram" className="p-8" />
       <Link to="/contact">
-        <img src={LogoLetter} alt="logo letter" className="p-5" />
+        <img src={LogoLetter} alt="logo letter" className="p-8" />
       </Link>
     </div>
   );
