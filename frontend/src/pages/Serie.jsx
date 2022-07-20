@@ -22,10 +22,10 @@ function Serie() {
       <Navbar />
       <Header />
       <div className="m-8">
-        <div className="w-40 absolute right-0 pt-20 opacity-80 cloud-right">
+        <div className="w-40 absolute right-0 pt-32 opacity-80 cloud-right">
           <img src={CloudRight} alt="tiny cloud" />
         </div>
-        <h1 className="text-white font-sansita text-3xl pt-12 pb-16">
+        <h1 className="text-white font-sansita text-3xl pt-12 pb-40">
           {creations[0].serie_name}
         </h1>
         {creations[0].arts.map((crea) => (

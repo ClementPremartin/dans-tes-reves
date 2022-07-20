@@ -113,7 +113,7 @@ select {
 }
 
 .cloud-left-leave {
-  animation: move-out-left  1.5s ease-in-out;
+  animation: move-out-left  3s ease-in-out;
 }
 
 @keyframes move-out-left {
@@ -124,7 +124,7 @@ select {
 }
 
 .cloud-mid-leave {
-  animation: move-out-right  1.5s ease-in-out;
+  animation: move-out-right  3s ease-in-out;
 }
 
 @keyframes move-out-right {
