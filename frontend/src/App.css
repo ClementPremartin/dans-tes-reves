@@ -111,3 +111,25 @@ select {
 @keyframes move{
   50% { transform: translateX(-15px); }
 }
+
+.cloud-left-leave {
+  animation: move-out-left  1.5s ease-in-out;
+}
+
+@keyframes move-out-left {
+  5% { transform: translateX(14px); }
+  10% { transform: translateX(18px); }
+  30% { transform: translateX(20px); }
+  100% { transform: translateX(-400px); }
+}
+
+.cloud-mid-leave {
+  animation: move-out-right  1.5s ease-in-out;
+}
+
+@keyframes move-out-right {
+  5% { transform: translateX(-14px); }
+  10% { transform: translateX(-18px); }
+  30% { transform: translateX(-20px); }
+  100% { transform: translateX(400px); }
+}
