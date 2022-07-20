@@ -6,18 +6,20 @@ import Waiting from "@pages/Waiting";
 import Home from "@pages/Home";
 import Serie from "@pages/Serie";
 import Contact from "@pages/Contact";
+import Navbar from "@components/Navbar";
 
 import "./App.css";
 
 function App() {
   return (
     <div>
+      <Navbar />
       <Routes>
         <Route path="/admin" element={<Admin />} />
         <Route path="/" element={<Waiting />} />
         <Route path="/home" element={<Home />} />
         <Route path="/home/:id" element={<Serie />} />
-        <Route path="/contact/:id" element={<Contact />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
