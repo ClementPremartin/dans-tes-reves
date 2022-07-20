@@ -2,7 +2,7 @@
 function SerieDetails({ crea }) {
   return (
     <div className="text-white">
-      <h1 className="font-varta text-xl font-semibold pb-4">{crea.artTitle}</h1>
+      <h1 className="font-varta text-xl font-semibold pb-4">{`"${crea.artTitle}"`}</h1>
       <ul className="font-varta">
         <li className="pb-1">{crea.date}</li>
         <li className="pb-1">{crea.size}</li>

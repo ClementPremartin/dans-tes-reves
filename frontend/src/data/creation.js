@@ -5,7 +5,7 @@ const creation = [
     arts: [
       {
         id: 1,
-        artTitle: "Joyeux Bopuquet",
+        artTitle: "Joyeux Bouquet",
         date: 2022,
         size: "21 x 14,8cm",
         technical: "Gravure sur verre, collage textile, papier fait main",
