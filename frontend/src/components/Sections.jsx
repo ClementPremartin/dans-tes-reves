@@ -8,7 +8,7 @@ function Sections() {
 
   return (
     <div>
-      <h2 className="text-white font-sansita text-3xl pt-12 pb-16">
+      <h2 className="text-white font-sansita text-3xl pt-20 pb-36">
         Créations originales
       </h2>
       <div className="flex flex-col items-center">
