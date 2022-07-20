@@ -5,7 +5,6 @@ import SectionCard from "./SectionCard";
 
 function Sections() {
   const [cards] = useState(section);
-
   return (
     <div>
       <h2 className="text-white font-sansita text-3xl pt-20 pb-36">
@@ -13,7 +12,7 @@ function Sections() {
       </h2>
       <div className="flex flex-col items-center">
         {cards.map((card) => (
-          <SectionCard card={card} />
+          <SectionCard key={card.id} card={card} />
         ))}
       </div>
     </div>
