@@ -1,11 +1,12 @@
-import presentation from "../data/presentation";
+/* eslint-disable import/no-unresolved */
+import Presentation from "@components/Presentation";
+import Sections from "@components/Sections";
 
 function Home() {
   return (
-    <div className="m-8 flex flex-col">
-      {presentation.map((pres) => (
-        <p className="font-varta pb-5 text-white">{pres.description}</p>
-      ))}
+    <div className="m-8">
+      <Presentation />
+      <Sections />
     </div>
   );
 }
