@@ -8,6 +8,10 @@ module.exports = {
         darkBlue: "#475C6A",
         white: "#FFFFFF",
       },
+      fontFamily: {
+        varta: ["Varta", "sans-serif"],
+        sansita: ["Sansita", "sans-serif"],
+      },
     },
   },
   plugins: [],
