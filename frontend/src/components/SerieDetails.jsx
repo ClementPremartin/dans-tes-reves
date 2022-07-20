@@ -12,7 +12,7 @@ function SerieDetails({ crea }) {
             crea.picture[0].image_url
           }`}
           alt={`${crea.picture[0].image_alt}`}
-          className="w-100 rounded-xl shadow-lg mb-9"
+          className="w-100 rounded-xl shadow-lg mb-9 w-96"
         />
         <li>{crea.story}</li>
       </ul>
