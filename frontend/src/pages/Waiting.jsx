@@ -1,9 +1,19 @@
 /* eslint-disable import/no-unresolved */
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Logo from "@assets/logo-dtr-dark.png";
 import CloudMid from "@assets/cloud-mid.png";
 import CloudLeft from "@assets/cloud-left.png";
 
 function Waiting() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/home");
+    }, 1500);
+  }, []);
+
   return (
     <div className="h-screen flex items-center justify-center">
       <div className="absolute top-20 left-0 opacity-80 cloud-left-leave w-64">
