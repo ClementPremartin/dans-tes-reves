@@ -7,6 +7,7 @@ import Home from "@pages/Home";
 import Serie from "@pages/Serie";
 import Contact from "@pages/Contact";
 import Navbar from "@components/Navbar";
+import Header from "@components/Header";
 
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <Header />
       <Routes>
         <Route path="/admin" element={<Admin />} />
         <Route path="/" element={<Waiting />} />

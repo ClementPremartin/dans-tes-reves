@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <div>
+    <div className="bg-lightBlue">
       <h1>Home Page</h1>
     </div>
   );
