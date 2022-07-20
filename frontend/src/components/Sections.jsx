@@ -11,7 +11,7 @@ function Sections() {
       <h2 className="text-white font-sansita text-2xl pt-12 pb-12">
         Créations originales
       </h2>
-      <div className="flex flex-col items-center w-full">
+      <div className="flex flex-col items-center">
         {cards.map((card) => (
           <SectionCard card={card} />
         ))}
