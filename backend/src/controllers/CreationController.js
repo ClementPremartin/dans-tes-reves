@@ -16,11 +16,24 @@ class CreationController {
   static read = (req, res) => {
     models.series
       .findSection(req.params.id)
-      .then(([rows]) => {
-        if (rows[0] == null) {
+      .then(([serie]) => {
+        if (serie[0] == null) {
           res.sendStatus(404);
         } else {
-          res.status(201).json(rows[0]);
+          models.creation
+            .findCreation(req.params.id)
+            .then(([creations]) => {
+              if (creations[0] === null) {
+                res.sendStatus(404);
+              } else {
+                const datas = { ...serie, creations };
+                res.status(201).json(datas);
+              }
+            })
+            .catch((err) => {
+              console.error(err);
+              res.sendStatus(500);
+            });
         }
       })
       .catch((err) => {
