@@ -6,6 +6,7 @@ const {
   ItemController,
   AuthController,
   PresentationController,
+  SectionController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -17,6 +18,7 @@ router.post("/items", ItemController.add);
 router.delete("/items/:id", ItemController.delete);
 
 router.get("/presentation", PresentationController.browse);
+router.get("/section", SectionController.browse);
 
 router.post("/login", checkData, AuthController.login);
 

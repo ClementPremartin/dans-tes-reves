@@ -69,7 +69,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `dans_tes_reves`.`creation` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `art-title` VARCHAR(45) NULL,
+  `art_title` VARCHAR(45) NULL,
   `date` INT NULL,
   `size` VARCHAR(45) NULL,
   `technical` VARCHAR(250) NULL,
@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `dans_tes_reves`.`creation` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-INSERT INTO `dans_tes_reves`.`creation` (`art-title`, `date`, `size`, `technical`, `story`, `series_id`, `files_id`) VALUES
+INSERT INTO `dans_tes_reves`.`creation` (`art_title`, `date`, `size`, `technical`, `story`, `series_id`, `files_id`) VALUES
 ("Joyeux bouquet", 2022, "21 cm x 14,8 cm", "Gravure sur verre, collage textile, papier fait main", "~ À chaque fleur son pot. Le joyeux bouquet a trouvé son joli vase à pois. Les feuilles dansent au chant des oiseaux. Blanche-neige et Aurore, rentrez chez vous.  ~", 1, NULL ),
 ("Première brasse dans l'étang", 2022, "21 cm x 14,8 cm", "Gravure sur verre, collage textile, papier fait main", "~ Charlie savait que le moment était venu. Elle a enfilé son plus beau costume de bain tout assorti -bien sûr-. Chaque détail compte pour la première baignade de l'année.  ~", 1, NULL),
 ("Goûter sous les cerisiers", 2022, "21 cm x 14,8 cm", "Gravure sur verre, collage textile, papier fait main", "~ Un carré de chocolat dans un pain brioché et quelques fruits feront l'affaire pour ce goûter gourmand. Allongée sur la nappe, je ferme les yeux. Le ballet des oiseaux s'intensifie jusqu'à mes oreilles. Printemps te voilà. ~", 1, NULL),
