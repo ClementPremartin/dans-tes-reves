@@ -67,7 +67,7 @@ function DeleteCreation() {
       <h3 className="font-varta text-white flex justify-center font-semibold text-2xl pb-5">
         Supprimer une création
       </h3>
-      <div>
+      <div className="flex flex-col">
         <label
           htmlFor="serie-select"
           className="text-white font-varta font-semibold"
@@ -85,30 +85,35 @@ function DeleteCreation() {
               </option>
             ))}
         </select>
+        <label
+          htmlFor="serie-select"
+          className="text-white font-varta font-semibold"
+        >
+          Choisi une oeuvre:
+        </label>
+        <select
+          name="select"
+          onChange={(e) => handleChangeArtId(e.target.value)}
+        >
+          {arts &&
+            arts
+              .filter((crea) => crea.series_id === parseInt(selectId, 10))
+              .map((crea) => (
+                <option key={crea.id} value={crea.id}>
+                  {crea.art_title}
+                </option>
+              ))}
+        </select>
       </div>
-      <label
-        htmlFor="serie-select"
-        className="text-white font-varta font-semibold"
-      >
-        Choisi une oeuvre:
-      </label>
-      <select name="select" onChange={(e) => handleChangeArtId(e.target.value)}>
-        {arts &&
-          arts
-            .filter((crea) => crea.series_id === parseInt(selectId, 10))
-            .map((crea) => (
-              <option key={crea.id} value={crea.id}>
-                {crea.art_title}
-              </option>
-            ))}
-      </select>
-      <button
-        type="button"
-        className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-9 mb-20 w-48"
-        onClick={() => handleClickDelete()}
-      >
-        Supprimer
-      </button>
+      <div className="flex justify-center">
+        <button
+          type="button"
+          className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-8 mb-20 w-48"
+          onClick={() => handleClickDelete()}
+        >
+          Supprimer
+        </button>
+      </div>
     </div>
   );
 }

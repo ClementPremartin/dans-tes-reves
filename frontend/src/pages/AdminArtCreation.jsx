@@ -5,6 +5,7 @@ import Footer from "@components/Footer";
 import Header from "@components/Header";
 
 import CloudMid from "@assets/cloud-mid.png";
+import Minion from "@assets/minion.svg";
 
 function AdminArtCreation() {
   return (
@@ -19,6 +20,9 @@ function AdminArtCreation() {
         </h1>
         <AddCreation />
         <DeleteCreation />
+      </div>
+      <div className="w-48 relative opacity-80 left-10 bottom-10 cloud-right">
+        <img src={Minion} alt="tiny minion" />
       </div>
       <div className="flex justify-center">
         <Footer />
