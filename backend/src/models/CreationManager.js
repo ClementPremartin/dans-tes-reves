@@ -14,7 +14,7 @@ class CreationManager extends AbstractManager {
 
   findCreation(id) {
     return this.connection.query(
-      `SELECT c.id, c.art_title, c.date, c.size, c.technical, c.story, f.image_url, f.image_alt FROM ${CreationManager.table} AS c
+      `SELECT c.id, c.art_title, c.date, c.size, c.technical, c.story, f.id AS file_id, f.image_url, f.image_alt FROM ${CreationManager.table} AS c
       LEFT JOIN files AS f ON f.id=c.files_id
       WHERE c.series_id = ?`,
       [id]
@@ -34,6 +34,13 @@ class CreationManager extends AbstractManager {
         id,
         fileId,
       ]
+    );
+  }
+
+  deleteCreation(id) {
+    return this.connection.query(
+      `DELETE FROM ${CreationManager.table} WHERE id=?`,
+      [id]
     );
   }
 }

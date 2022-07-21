@@ -26,4 +26,6 @@ router.get("/creation/:id", CreationController.read);
 
 router.post("/creation/:id", CreationController.add);
 
+router.delete("/creation/:id", CreationController.delete);
+
 module.exports = router;
