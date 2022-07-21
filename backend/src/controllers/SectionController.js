@@ -13,6 +13,18 @@ class SectionController {
       });
   };
 
+  static browseAll = (req, res) => {
+    models.series
+      .findAllSection()
+      .then(([rows]) => {
+        res.status(200).json(rows);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+  };
+
   static read = (req, res) => {
     models.creation
       .find(req.params.id)

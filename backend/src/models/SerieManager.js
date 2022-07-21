@@ -12,6 +12,10 @@ class SerieManager extends AbstractManager {
     );
   }
 
+  findAllSection() {
+    return this.connection.query(`SELECT id, name FROM ${SerieManager.table}`);
+  }
+
   addNewSerie(section) {
     return this.connection.query(
       `INSERT INTO ${SerieManager.table} (name) 
