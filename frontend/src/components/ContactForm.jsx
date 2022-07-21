@@ -1,4 +1,7 @@
+import axios from "axios";
 import { useState } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ContactForm() {
   const [userMessage, setUserMessage] = useState({
@@ -12,6 +15,24 @@ function ContactForm() {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setUserMessage({ ...userMessage, [name]: value });
+  };
+
+  const SubmitMail = () => {
+    axios
+      .post(`http://localhost:5000/sendEmail`, userMessage)
+      .then(() => {
+        setUserMessage({
+          email: "",
+          lastname: "",
+          firstname: "",
+          company: "",
+          message: "",
+        });
+        toast.success("Votre message à été envoyé.");
+      })
+      .catch(() => {
+        toast.warning("Un problème est survenue. Veuillez réessayer.");
+      });
   };
 
   return (
@@ -81,6 +102,7 @@ function ContactForm() {
           <button
             type="button"
             className="bg-darkBlue pl-5 pr-5 pb-2 pt-2 rounded-full text-white font-varta font-semibold text-lg transition hover:bg-slate-800 hover:scale-105"
+            onClick={() => SubmitMail()}
           >
             Envoyer
           </button>
