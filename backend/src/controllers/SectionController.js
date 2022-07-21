@@ -52,14 +52,14 @@ class SectionController {
   };
 
   static add = (req, res) => {
-    const item = req.body;
+    const section = req.body;
 
     // TODO validations (length, format...)
 
-    models.creation
-      .insert(item)
+    models.series
+      .addNewSerie(section)
       .then(([result]) => {
-        res.status(201).send({ ...item, id: result.insertId });
+        res.status(201).send({ ...section, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);

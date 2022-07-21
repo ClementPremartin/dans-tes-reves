@@ -11,6 +11,14 @@ class SerieManager extends AbstractManager {
       [id]
     );
   }
+
+  addNewSerie(section) {
+    return this.connection.query(
+      `INSERT INTO ${SerieManager.table} (name) 
+      VALUES (?)`,
+      [section.name]
+    );
+  }
 }
 
 module.exports = SerieManager;

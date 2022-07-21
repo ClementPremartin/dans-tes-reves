@@ -25,6 +25,7 @@ router.get("/section", SectionController.browse);
 router.get("/creation/:id", CreationController.read);
 
 router.post("/creation/:id", CreationController.add);
+router.post("/section", SectionController.add);
 
 router.delete("/creation/:id", CreationController.delete);
 
