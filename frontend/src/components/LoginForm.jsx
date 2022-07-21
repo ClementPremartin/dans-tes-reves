@@ -45,11 +45,11 @@ function LoginForm() {
       <form className="flex flex-col items-center">
         <label htmlFor="login">
           <div className="flex flex-row items-center justify-end">
-            <div className="w-5 mb-8 mr-2">
+            <div className="w-5 mb-5 mr-2">
               <img src={Avatar} alt="avatar" />
             </div>
             <input
-              className="bg-white bg-opacity-0 border-b border-b-white mb-8 text-white"
+              className="bg-white bg-opacity-0 border-b border-b-white mb-5 text-white"
               id="email"
               type="text"
               name="email"
@@ -81,7 +81,7 @@ function LoginForm() {
         <input
           type="button"
           value="Se connecter"
-          className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-9 mb-20"
+          className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-slate-900 opacity-80 hover:bg-opacity-90 rounded-full mt-6"
           onClick={handleClick}
         />
         {msg && <p>{msg}</p>}
