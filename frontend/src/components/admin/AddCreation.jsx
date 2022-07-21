@@ -14,7 +14,16 @@ function AddCreation() {
     setIdSelected(id);
   };
 
-  const [userCrea] = useState({
+  const [userCrea, setUserCrea] = useState({
+    art_title: "",
+    date: "",
+    size: "",
+    technical: "",
+    story: "",
+    image_url: "",
+  });
+
+  const [userCreaInitial] = useState({
     art_title: "",
     date: "",
     size: "",
@@ -31,6 +40,7 @@ function AddCreation() {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/sectionall`)
       .then((res) => {
+        setUserCrea(userCreaInitial);
         setSection(res.data);
       })
       .catch(() =>
@@ -46,16 +56,15 @@ function AddCreation() {
     if (data.image_url[0]) {
       formData.append("image_url", data.image_url[0]);
     }
-
-    formData.append("coucou", JSON.stringify(data));
+    formData.append("userCrea", JSON.stringify(data));
     axios
       .post(
         `${import.meta.env.VITE_BACKEND_URL}/creation/${idSelected}`,
         formData
       )
-      .then(() =>
-        toast.success("Nouvelle Créa ajoutée avec succès ! Bien joué Boss !")
-      )
+      .then(() => {
+        toast.success("Nouvelle Créa ajoutée avec succès ! Bien joué Boss !");
+      })
       .catch(() =>
         toast.warning(
           "Une erreur s'est produite durant l'envoie des données. Veuillez réessayer plz."
