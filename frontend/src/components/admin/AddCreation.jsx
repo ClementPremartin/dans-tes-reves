@@ -14,16 +14,7 @@ function AddCreation() {
     setIdSelected(id);
   };
 
-  const [userCrea, setUserCrea] = useState({
-    art_title: "",
-    date: "",
-    size: "",
-    technical: "",
-    story: "",
-    image_url: "",
-  });
-
-  const [userCreaInitial] = useState({
+  const [userCrea] = useState({
     art_title: "",
     date: "",
     size: "",
@@ -40,7 +31,6 @@ function AddCreation() {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/sectionall`)
       .then((res) => {
-        setUserCrea(userCreaInitial);
         setSection(res.data);
       })
       .catch(() =>

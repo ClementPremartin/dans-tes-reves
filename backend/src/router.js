@@ -27,6 +27,7 @@ router.post("/login", checkData, AuthController.login);
 router.get("/presentation", PresentationController.browse);
 router.get("/section", SectionController.browse);
 router.get("/sectionall", SectionController.browseAll);
+router.get("/creation", CreationController.browse);
 router.get("/creation/:id", CreationController.read);
 
 router.post(

@@ -81,10 +81,10 @@ class CreationController {
 
   static delete = (req, res) => {
     models.creation
-      .deleteCreation(req.body.id)
+      .deleteCreation(req.params.id)
       .then(() =>
         models.files
-          .deleteFile(req.body.file_id)
+          .deleteFile(req.params.id)
           .then(() => {
             res.sendStatus(204);
           })
