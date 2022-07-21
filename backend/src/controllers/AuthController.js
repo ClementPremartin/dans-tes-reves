@@ -10,14 +10,15 @@ class AuthController {
       if (!user[0]) {
         return res.status(400).send("Invalid credentials. Please try again.");
       }
+
       const checkPassword = await verifyPassword(
         req.body.password,
-        user[0].password
+        user[0].hashed_password
       );
       if (!checkPassword) {
         return res.status(400).send("Incorrect credentials. Please try again.");
       }
-      const userCompanyGroup = await models.user.findCompanyUser(user[0].id);
+      const userInfos = await models.user.findUser(user[0].id);
 
       const token = jwt.sign(
         {
@@ -35,7 +36,7 @@ class AuthController {
           expires: new Date(Date.now() + 1000 * 60 * 60 * 24),
         })
         .json({
-          ...userCompanyGroup[0],
+          ...userInfos[0],
         });
     } catch (err) {
       console.error(err);
