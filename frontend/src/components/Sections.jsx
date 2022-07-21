@@ -30,7 +30,7 @@ function Sections() {
       </h2>
       <div className="flex flex-col items-center">
         {cards &&
-          cards.map((card) => <SectionCard key={card.id} card={card} />)}
+          cards.map((card) => <SectionCard key={card.serie_id} card={card} />)}
       </div>
     </div>
   );

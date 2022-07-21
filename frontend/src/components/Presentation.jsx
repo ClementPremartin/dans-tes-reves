@@ -24,7 +24,9 @@ function Presentation() {
     <div className="flex flex-col">
       {presentation &&
         presentation.map((pres) => (
-          <p className="font-varta pb-5 text-white">{pres.description}</p>
+          <p className="font-varta pb-5 text-white" key={pres.id}>
+            {pres.description}
+          </p>
         ))}
     </div>
   );
