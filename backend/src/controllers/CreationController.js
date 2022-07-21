@@ -65,21 +65,13 @@ class CreationController {
   };
 
   static add = (req, res) => {
-    const crea = req.body;
-
+    const crea = JSON.parse(req.body.userCrea);
+    delete crea.image_url;
     // TODO validations (length, format...)
-    models.files
-      .addNewfile(crea, req.params.id)
-      .then((file) => {
-        models.creation
-          .addNewCreation(crea, req.params.id, file[0].insertId)
-          .then(([result]) => {
-            res.status(201).send({ ...crea, id: result.insertId });
-          })
-          .catch((err) => {
-            console.error(err);
-            res.sendStatus(500);
-          });
+    models.creation
+      .addNewCreation(crea, req.params.id, req.image.id)
+      .then(([result]) => {
+        res.status(201).send({ ...crea, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);

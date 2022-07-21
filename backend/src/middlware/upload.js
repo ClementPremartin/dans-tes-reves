@@ -16,7 +16,7 @@ const uploadPublic = async (req, res, next) => {
         res.status(400).send("Error while uploading");
       } else {
         models.files
-          .addNewfile(newFileName)
+          .addNewfile(newFileName, req.params.id)
           .then((image) => {
             req.image = {
               id: image[0].insertId,
