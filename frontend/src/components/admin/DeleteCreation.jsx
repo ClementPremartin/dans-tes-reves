@@ -67,7 +67,7 @@ function DeleteCreation() {
       <h3 className="font-varta text-white flex justify-center font-semibold text-2xl pb-5">
         Supprimer une création
       </h3>
-      <div className="flex flex-col ali">
+      <div className="flex flex-col">
         <label
           htmlFor="serie-select"
           className="text-white font-varta font-semibold"
@@ -108,7 +108,7 @@ function DeleteCreation() {
       <div className="flex justify-center">
         <button
           type="button"
-          className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-9 mb-20 w-48"
+          className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-8 mb-20 w-48"
           onClick={() => handleClickDelete()}
         >
           Supprimer

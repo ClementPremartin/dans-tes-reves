@@ -67,70 +67,90 @@ function AddCreation() {
       <h2 className="font-varta text-white flex justify-center font-semibold text-2xl pb-5">
         Ajouter une création
       </h2>
-      <label
-        htmlFor="serie-select"
-        className="text-white font-varta font-semibold"
-      >
-        Choisi une série:
-      </label>
-      <select name="select" onChange={(e) => handleChangeSerie(e.target.value)}>
-        {section &&
-          section.map((select) => (
-            <option key={select.id} value={select.id}>
-              {select.name}
-            </option>
-          ))}
-      </select>
+      <div className="flex flex-col">
+        <label
+          htmlFor="serie-select"
+          className="text-white font-varta font-semibold flex flex-col"
+        >
+          Choisi une série:
+        </label>
+        <select
+          name="select"
+          onChange={(e) => handleChangeSerie(e.target.value)}
+        >
+          {section &&
+            section.map((select) => (
+              <option key={select.id} value={select.id}>
+                {select.name}
+              </option>
+            ))}
+        </select>
+      </div>
       <form>
         <div className="flex flex-col">
           <div className="name-container flex w-full flex-col">
-            <label htmlFor="art_title">
+            <label
+              htmlFor="art_title"
+              className="text-white font-varta font-semibold"
+            >
               Titre de l'oeuvre
               <input
                 defaultValue={userCrea.art_title}
-                className="w-full"
+                className="w-full text-darkBlue"
                 placeholder="Titre de l'oeuvre"
                 {...register("art_title")}
               />
             </label>
-            <label htmlFor="date">
+            <label
+              htmlFor="date"
+              className="text-white font-varta font-semibold"
+            >
               Date
               <input
                 defaultValue={userCrea.date}
-                className="w-full"
+                className="w-full text-darkBlue"
                 placeholder="Date"
                 {...register("date")}
               />
             </label>
-            <label htmlFor="size">
+            <label
+              htmlFor="size"
+              className="text-white font-varta font-semibold"
+            >
               Dimensions
               <input
                 defaultValue={userCrea.size}
-                className="w-full"
+                className="w-full text-darkBlue"
                 placeholder="Dimensions"
                 {...register("size")}
               />
             </label>
-            <label htmlFor="technical">
+            <label
+              htmlFor="technical"
+              className="text-white font-varta font-semibold"
+            >
               Technique
               <input
                 defaultValue={userCrea.technical}
-                className="w-full"
+                className="w-full text-darkBlue"
                 placeholder="Technique"
                 {...register("technical")}
               />
             </label>
-            <label htmlFor="story">
+            <label
+              htmlFor="story"
+              className="text-white font-varta font-semibold"
+            >
               Texte d'ambiance
               <input
                 defaultValue={userCrea.story}
-                className="w-full"
+                className="w-full text-darkBlue"
                 placeholder="Texte d'ambiance"
                 {...register("story")}
               />
             </label>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center m-8">
             <input {...register("image_url")} type="file" />
             <img
               src={
@@ -141,12 +161,13 @@ function AddCreation() {
                   : ""
               }
               alt="En attente "
+              className="opacity-0"
             />
           </div>
           <div className="flex justify-center">
             <button
               type="button"
-              className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-9 mb-20 w-48"
+              className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mb-20 w-48"
               onClick={handleSubmit(onSubmitCrea)}
             >
               Ajouter
