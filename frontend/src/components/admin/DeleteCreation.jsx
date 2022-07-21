@@ -108,7 +108,7 @@ function DeleteCreation() {
       <div className="flex justify-center">
         <button
           type="button"
-          className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-8 mb-20 w-48"
+          className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-12 mb-20 w-48"
           onClick={() => handleClickDelete()}
         >
           Supprimer
