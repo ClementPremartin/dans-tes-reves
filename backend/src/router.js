@@ -12,6 +12,7 @@ const {
   PresentationController,
   SectionController,
   CreationController,
+  MailerController,
 } = require("./controllers");
 
 const router = express.Router();
@@ -37,6 +38,7 @@ router.post(
   CreationController.add
 );
 router.post("/section", SectionController.add);
+router.post("/sendEmail", MailerController.sendMail);
 
 router.delete("/creation/:id", CreationController.delete);
 
