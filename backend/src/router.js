@@ -18,10 +18,12 @@ router.put("/items/:id", ItemController.edit);
 router.post("/items", ItemController.add);
 router.delete("/items/:id", ItemController.delete);
 
+router.post("/login", checkData, AuthController.login);
+
 router.get("/presentation", PresentationController.browse);
 router.get("/section", SectionController.browse);
 router.get("/creation/:id", CreationController.read);
 
-router.post("/login", checkData, AuthController.login);
+router.post("/creation/:id", CreationController.add);
 
 module.exports = router;

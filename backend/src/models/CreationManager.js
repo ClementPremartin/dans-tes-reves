@@ -20,6 +20,14 @@ class CreationManager extends AbstractManager {
       [id]
     );
   }
+
+  addNewCreation(crea, id) {
+    return this.connection.query(
+      `Insert INTO ${CreationManager.table} (art_title, date, size, technical, story, series_id) 
+      VALUES (?, ?, ?, ?, ?, ?)`,
+      [crea.art_title, crea.date, crea.size, crea.technical, crea.story, id]
+    );
+  }
 }
 
 module.exports = CreationManager;

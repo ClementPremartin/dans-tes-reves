@@ -65,14 +65,14 @@ class CreationController {
   };
 
   static add = (req, res) => {
-    const item = req.body;
+    const crea = req.body;
 
     // TODO validations (length, format...)
 
     models.creation
-      .insert(item)
+      .addNewCreation(crea, req.params.id)
       .then(([result]) => {
-        res.status(201).send({ ...item, id: result.insertId });
+        res.status(201).send({ ...crea, id: result.insertId });
       })
       .catch((err) => {
         console.error(err);
