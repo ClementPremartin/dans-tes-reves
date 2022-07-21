@@ -46,13 +46,13 @@ function AddCreation() {
     if (data.image_url[0]) {
       formData.append("image_url", data.image_url[0]);
     }
-
-    formData.append("coucou", JSON.stringify(data));
+    formData.append("userCrea", JSON.stringify(data));
     axios
       .post(
         `${import.meta.env.VITE_BACKEND_URL}/creation/${idSelected}`,
         formData
       )
+      .then((res) => res.json())
       .then(() =>
         toast.success("Nouvelle Créa ajoutée avec succès ! Bien joué Boss !")
       )

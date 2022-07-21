@@ -1,6 +1,10 @@
 const express = require("express");
+const multer = require("multer");
+
+const upload = multer({ dest: "public/tmp/" });
 
 const { checkData } = require("./middlware/auth");
+const { uploadPublic } = require("./middlware/upload");
 
 const {
   ItemController,
@@ -25,7 +29,12 @@ router.get("/section", SectionController.browse);
 router.get("/sectionall", SectionController.browseAll);
 router.get("/creation/:id", CreationController.read);
 
-router.post("/creation/:id", CreationController.add);
+router.post(
+  "/creation/:id",
+  upload.single("image_url"),
+  uploadPublic,
+  CreationController.add
+);
 router.post("/section", SectionController.add);
 
 router.delete("/creation/:id", CreationController.delete);
