@@ -8,7 +8,7 @@ function AdminArtCreation() {
     <div>
       <Header />
       <div className="m-8">
-        <h1 className="text-white font-sansita text-3xl pt-12 pb-40">
+        <h1 className="text-white font-sansita text-3xl pt-12 pb-12">
           Gestion des Créations
         </h1>
         <AddCreation />
