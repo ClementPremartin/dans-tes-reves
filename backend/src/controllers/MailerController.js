@@ -17,7 +17,7 @@ class MailerController {
 
     const mailOptions = {
       from: `${email}`,
-      to: `olivia.huet@hotmail.fr`, // this is the address to which the email will be sent
+      to: `danstesreves.olivia@gmail.com`, // this is the address to which the email will be sent
       subject: `Mail from ${firstname} ${lastname} come from dans tes rêves website`,
       text: `${message} \n\n Email: ${email} \n\n Structure: ${company}`,
       html: `<p>${message}</p> <p>Email: ${email}</p> <p>Structure: ${company}</p>`,
