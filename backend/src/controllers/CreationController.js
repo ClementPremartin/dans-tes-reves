@@ -68,11 +68,18 @@ class CreationController {
     const crea = req.body;
 
     // TODO validations (length, format...)
-
-    models.creation
-      .addNewCreation(crea, req.params.id)
-      .then(([result]) => {
-        res.status(201).send({ ...crea, id: result.insertId });
+    models.files
+      .addNewfile(crea, req.params.id)
+      .then((file) => {
+        models.creation
+          .addNewCreation(crea, req.params.id, file[0].insertId)
+          .then(([result]) => {
+            res.status(201).send({ ...crea, id: result.insertId });
+          })
+          .catch((err) => {
+            console.error(err);
+            res.sendStatus(500);
+          });
       })
       .catch((err) => {
         console.error(err);
