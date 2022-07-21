@@ -3,6 +3,8 @@ import Footer from "@components/Footer";
 import Header from "@components/Header";
 import LoginForm from "@components/LoginForm";
 
+import CloudMid from "@assets/cloud-mid.png";
+
 function Admin() {
   return (
     <div>
@@ -12,9 +14,12 @@ function Admin() {
           C'est la booooss
         </h1>
         <LoginForm />
-        <div className="flex justify-center">
-          <Footer />
-        </div>
+      </div>
+      <div className="w-48 relative opacity-80 cloud-mid">
+        <img src={CloudMid} alt="tiny cloud" />
+      </div>
+      <div className="flex justify-center">
+        <Footer />
       </div>
     </div>
   );
