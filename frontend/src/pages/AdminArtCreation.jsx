@@ -14,7 +14,7 @@ function AdminArtCreation() {
           <img src={CloudMid} alt="tiny cloud" />
         </div>
         <h1 className="text-white font-sansita text-3xl pt-12 pb-12">
-          Gestion des Créations
+          Gestion des créations
         </h1>
         <AddCreation />
       </div>

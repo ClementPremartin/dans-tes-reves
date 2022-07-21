@@ -66,7 +66,7 @@ function AddCreation() {
   return (
     <div>
       <h2 className="font-varta text-white flex justify-center font-semibold text-2xl pb-5">
-        Ajouter Une Création
+        Ajouter une création
       </h2>
       <label
         htmlFor="serie-select"
@@ -104,11 +104,11 @@ function AddCreation() {
               />
             </label>
             <label htmlFor="size">
-              Taille
+              Dimensions
               <input
                 defaultValue={userCrea.size}
                 className="w-full"
-                placeholder="Taille"
+                placeholder="Dimensions"
                 {...register("size")}
               />
             </label>
