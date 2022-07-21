@@ -35,6 +35,22 @@ const creation = [
         story:
           "~ Charlie savait que le moment était venu. Elle a enfilé son plus beau costume de bain tout assorti -bien sûr-. Chaque détail compte pour la première baignade de l'année. ~",
       },
+      {
+        id: 3,
+        artTitle: "Goûter sous les cerisiers",
+        date: 2022,
+        size: "21 cm x 14,8 cm",
+        technical: "Gravure sur verre, collage textile, papier fait main",
+        picture: [
+          {
+            id: 1,
+            image_url: "triade-des-beaux-j3.jpg",
+            image_alt: "image serie 1",
+          },
+        ],
+        story:
+          "~ Un carré de chocolat dans un pain brioché et quelques fruits feront l'affaire pour ce goûter gourmand. Allongée sur la nappe, je ferme les yeux. Le ballet des oiseaux s'intensifie jusqu'à mes oreilles. Printemps te voilà. ~",
+      },
     ],
   },
 ];

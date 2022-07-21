@@ -26,7 +26,7 @@ const section = [
       },
       {
         id: 2,
-        image_url: "triade-des-beaux-j2-rognée.jpg",
+        image_url: "du-beurre-ds-mon-cr-tissu.jpg",
         image_alt: "image serie 2",
       },
     ],

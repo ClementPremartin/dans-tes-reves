@@ -31,7 +31,7 @@ function LoginForm() {
         // { withCredentials: true }
       )
       .then((res) => {
-        toast.success("Vous êtes connecté !");
+        toast.success("Bienvenue Boss !");
         setUser(res.data);
         navigate("/admin/artcreation");
       })
