@@ -21,7 +21,14 @@ function ContactForm() {
     axios
       .post(`http://localhost:5000/sendEmail`, userMessage)
       .then(() => {
-        toast.success("Message envoyé !");
+        setUserMessage({
+          email: "",
+          lastname: "",
+          firstname: "",
+          company: "",
+          message: "",
+        });
+        toast.success("Votre message à été envoyé.");
       })
       .catch(() => {
         toast.warning("Un problème est survenue. Veuillez réessayer.");
