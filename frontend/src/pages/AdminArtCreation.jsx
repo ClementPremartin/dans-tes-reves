@@ -1,5 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import AddCreation from "@components/admin/AddCreation";
+import DeleteCreation from "@components/admin/DeleteCreation";
 import Footer from "@components/Footer";
 import Header from "@components/Header";
 
@@ -17,6 +18,7 @@ function AdminArtCreation() {
           Gestion des créations
         </h1>
         <AddCreation />
+        <DeleteCreation />
       </div>
       <div className="flex justify-center">
         <Footer />

@@ -3,6 +3,10 @@ const AbstractManager = require("./AbstractManager");
 class CreationManager extends AbstractManager {
   static table = "creation";
 
+  findAll() {
+    return this.connection.query(`SELECT * FROM ${CreationManager.table}`);
+  }
+
   findSection() {
     return this.connection.query(
       `SELECT s.id AS serie_id, s.name AS serie_name, f.image_url, f.image_alt FROM ${CreationManager.table} AS c
