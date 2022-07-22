@@ -8,6 +8,13 @@ class PresentationManager extends AbstractManager {
       `SELECT id, description FROM ${PresentationManager.table}`
     );
   }
+
+  update(item) {
+    return this.connection.query(
+      `update ${PresentationManager.table} set description = ? where id = ?`,
+      [item.description, item.id]
+    );
+  }
 }
 
 module.exports = PresentationManager;
