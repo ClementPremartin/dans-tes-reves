@@ -49,7 +49,7 @@ function AddSerie() {
               id="namefds"
               name="name"
               required
-              className="w-full rounded-full bg-darkBlue opacity-75 p-2 text-left mb-5"
+              className="w-full rounded-full bg-darkBlue opacity-75 p-2 text-left"
               onChange={(e) => handleChange(e)}
               value={userSerie.name}
             />
@@ -58,7 +58,7 @@ function AddSerie() {
         <div className="flex justify-center">
           <button
             type="button"
-            className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mb-20 w-48"
+            className="px-6 py-2.5 cursor-pointer text-center text-white text-base bg-darkBlue hover:bg-opacity-90 rounded-full mt-12 mb-20 w-48"
             onClick={() => onSubmitSerie()}
           >
             Ajouter
