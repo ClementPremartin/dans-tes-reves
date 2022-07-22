@@ -1,36 +1,33 @@
-import Counter from "@components/Counter";
-import logo from "@assets/logo.svg";
+/* eslint-disable import/no-unresolved */
+import Presentation from "@components/Presentation";
+import Sections from "@components/Sections";
+import Navbar from "@components/Navbar";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
 
-export default function Home() {
+import CloudRight from "@assets/cloud-right.png";
+import CloudMid from "@assets/cloud-mid.png";
+
+function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div>
+      <Navbar />
+      <Header />
+      <div className="m-8">
+        <Presentation />
+        <div className="w-40 absolute right-0 pt-28 opacity-80 cloud-right">
+          <img src={CloudRight} alt="tiny cloud" />
+        </div>
+        <Sections />
+        <div className="w-40 relative opacity-80 cloud-mid">
+          <img src={CloudMid} alt="tiny cloud" />
+        </div>
+      </div>
+      <div className="flex justify-center">
+        <Footer />
+      </div>
+    </div>
   );
 }
+
+export default Home;
