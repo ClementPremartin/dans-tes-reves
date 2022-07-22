@@ -34,7 +34,7 @@ function AdminArtCreation() {
           <img src={CloudRight} alt="tiny cloud" />
         </div>
       </div>
-      <div className="w-48 relative opacity-80 left-10 bottom-10 cloud-right">
+      <div className="w-48 relative opacity-80 left-10 bottom-10 cloud-mid">
         <img src={Minion} alt="tiny minion" />
       </div>
       <div className="flex justify-center">
