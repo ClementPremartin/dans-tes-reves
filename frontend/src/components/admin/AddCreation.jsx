@@ -91,7 +91,7 @@ function AddCreation() {
           <div className="name-container flex w-full flex-col">
             <label
               htmlFor="art_title"
-              className="text-white font-varta font-semibold"
+              className="text-white font-varta font-semibold flex flex-col"
             >
               Titre de l'oeuvre
               <input

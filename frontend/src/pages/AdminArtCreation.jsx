@@ -6,6 +6,7 @@ import Header from "@components/Header";
 
 import CloudMid from "@assets/cloud-mid.png";
 import Minion from "@assets/minion.svg";
+import AddSerie from "@components/admin/AddSerie";
 
 function AdminArtCreation() {
   return (
@@ -20,6 +21,7 @@ function AdminArtCreation() {
         </h1>
         <AddCreation />
         <DeleteCreation />
+        <AddSerie />
       </div>
       <div className="w-48 relative opacity-80 left-10 bottom-10 cloud-right">
         <img src={Minion} alt="tiny minion" />
