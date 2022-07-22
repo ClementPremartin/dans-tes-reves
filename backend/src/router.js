@@ -40,6 +40,8 @@ router.post(
 router.post("/section", SectionController.add);
 router.post("/sendEmail", MailerController.sendMail);
 
+router.put("/presentation/:id", PresentationController.edit);
+
 router.delete("/creation/:id", CreationController.delete);
 
 module.exports = router;

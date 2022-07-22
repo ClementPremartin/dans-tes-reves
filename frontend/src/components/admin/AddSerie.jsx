@@ -38,7 +38,7 @@ function AddSerie() {
   return (
     <div>
       <div className="font-varta text-white flex justify-center font-semibold text-2xl pb-5">
-        <h1>Ajouter une série</h1>
+        <h3>Ajouter une série</h3>
       </div>
       <div className="flex flex-col">
         <form className="">
