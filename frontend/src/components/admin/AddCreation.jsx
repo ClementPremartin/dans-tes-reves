@@ -67,7 +67,7 @@ function AddCreation() {
       <h2 className="font-varta text-white flex justify-center font-semibold text-2xl pb-5">
         Ajouter une création
       </h2>
-      <div className="flex flex-col">
+      <div className="flex flex-col mb-5">
         <label
           htmlFor="serie-select"
           className="text-white font-varta font-semibold flex flex-col"
@@ -96,9 +96,9 @@ function AddCreation() {
               Titre de l'oeuvre
               <input
                 defaultValue={userCrea.art_title}
-                className="w-full text-darkBlue"
                 placeholder="Titre de l'oeuvre"
                 {...register("art_title")}
+                className="w-full rounded-full bg-darkBlue opacity-75 p-2 text-left mb-5"
               />
             </label>
             <label
@@ -108,9 +108,9 @@ function AddCreation() {
               Date
               <input
                 defaultValue={userCrea.date}
-                className="w-full text-darkBlue"
                 placeholder="Date"
                 {...register("date")}
+                className="w-full rounded-full bg-darkBlue opacity-75 p-2 text-left mb-5"
               />
             </label>
             <label
@@ -120,9 +120,9 @@ function AddCreation() {
               Dimensions
               <input
                 defaultValue={userCrea.size}
-                className="w-full text-darkBlue"
                 placeholder="Dimensions"
                 {...register("size")}
+                className="w-full rounded-full bg-darkBlue opacity-75 p-2 text-left mb-5"
               />
             </label>
             <label
@@ -132,9 +132,9 @@ function AddCreation() {
               Technique
               <input
                 defaultValue={userCrea.technical}
-                className="w-full text-darkBlue"
                 placeholder="Technique"
                 {...register("technical")}
+                className="w-full rounded-full bg-darkBlue opacity-75 p-2 text-left mb-5"
               />
             </label>
             <label
@@ -144,9 +144,9 @@ function AddCreation() {
               Texte d'ambiance
               <input
                 defaultValue={userCrea.story}
-                className="w-full text-darkBlue"
                 placeholder="Texte d'ambiance"
                 {...register("story")}
+                className="w-full rounded-full bg-darkBlue opacity-75 p-2 text-left mb-5"
               />
             </label>
           </div>

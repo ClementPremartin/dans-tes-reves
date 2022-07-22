@@ -76,7 +76,7 @@ function UpdatePresentation() {
           placeholder=""
           onClick={() => handleClickUpdate()}
         >
-          Ajouter
+          Modifier
         </button>
       </div>
     </div>

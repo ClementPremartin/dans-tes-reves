@@ -5,6 +5,7 @@ import Footer from "@components/Footer";
 import Header from "@components/Header";
 
 import CloudMid from "@assets/cloud-mid.png";
+import CloudRight from "@assets/cloud-right.png";
 import Minion from "@assets/minion.svg";
 import AddSerie from "@components/admin/AddSerie";
 import UpdatePresentation from "@components/admin/UpdatePresentation";
@@ -21,9 +22,17 @@ function AdminArtCreation() {
           Gestion des créations
         </h1>
         <AddCreation />
+        <div className="w-48 absolute right-0 pt-28 opacity-80 cloud-right">
+          <img src={CloudRight} alt="tiny cloud" />
+        </div>
         <DeleteCreation />
         <AddSerie />
         <UpdatePresentation />
+      </div>
+      <div className="flex justify-center">
+        <div className="w-48 opacity-80 cloud-right mb-5">
+          <img src={CloudRight} alt="tiny cloud" />
+        </div>
       </div>
       <div className="w-48 relative opacity-80 left-10 bottom-10 cloud-right">
         <img src={Minion} alt="tiny minion" />

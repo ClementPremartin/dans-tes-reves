@@ -75,6 +75,7 @@ function DeleteCreation() {
           Choisi une série:
         </label>
         <select
+          className="mb-8"
           name="select"
           onChange={(e) => handleChangeSerie(e.target.value)}
         >
@@ -92,6 +93,7 @@ function DeleteCreation() {
           Choisi une oeuvre:
         </label>
         <select
+          className="mb-8"
           name="select"
           onChange={(e) => handleChangeArtId(e.target.value)}
         >
