@@ -64,9 +64,9 @@ function DeleteCreation() {
 
   return (
     <div>
-      <h3 className="font-varta text-white flex justify-center font-semibold text-2xl pb-5">
+      <h4 className="font-varta text-white flex justify-center font-semibold text-2xl pb-5">
         Supprimer une création
-      </h3>
+      </h4>
       <div className="flex flex-col">
         <label
           htmlFor="serie-select"

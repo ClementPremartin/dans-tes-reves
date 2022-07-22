@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 const models = require("../models");
 
 class PresentationController {
@@ -33,7 +34,6 @@ class PresentationController {
     const item = req.body;
 
     // TODO validations (length, format...)
-
     item.id = parseInt(req.params.id, 10);
 
     models.presentation
